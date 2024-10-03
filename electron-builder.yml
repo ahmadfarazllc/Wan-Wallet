@@ -1,0 +1,50 @@
+appId: org.wallet.wanchain
+copyright: Wanchain Foundation
+productName: Wan Wallet
+artifactName: Wan-Wallet-${os}-${version}.${ext}
+
+asar: true
+
+directories:
+  buildResources: build/
+  output: dist/
+
+files:
+  - package.json
+  - build/
+
+publish:
+  - provider: github
+    owner: wanchain
+    repo: wan-wallet-desktop
+
+mac:
+  category: public.app-category.finance
+  icon: build/icons/icon.icns
+  hardenedRuntime: true
+  gatekeeperAssess: false
+  entitlements: build/entitlements.mac.plist
+  entitlementsInherit: build/entitlements.mac.plist
+  target:
+    - dmg
+    - zip
+
+win:
+  icon: build/icons/icon.ico
+  target: nsis
+
+linux:
+  category: Finance
+  target: 
+    - deb
+    - appImage
+
+dmg:
+  sign: false
+
+nsis:
+  oneClick: false
+  allowToChangeInstallationDirectory: true
+  installerIcon: build/icons/icon.ico
+
+afterSign: scripts/notarize.js

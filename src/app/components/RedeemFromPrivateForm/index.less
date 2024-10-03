@@ -1,0 +1,69 @@
+.redeemFromPrivateFormModal {
+    :global(.ant-spin-nested-loading > div > .ant-spin) {
+        position: absolute !important;
+    }
+
+    :global(.ant-spin-blur::after) {
+        opacity: 0;
+    }
+
+    :global(.ant-spin-text) {
+        font-size: 20px;
+        padding: 13px 0 0 11px;
+    }
+
+    :global(.ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled)) {
+        background: linear-gradient(90deg, #4a4c72 0%, #3d3e5f 100%) !important;
+    }
+}
+
+.transForm {
+    :global(.ant-select-selection) {
+        width: 480px;
+        border-radius: 20px;
+        border: none;
+        font-size: 16px;
+        color: #FFFFFF !important;
+        background: #1F2034 !important;
+    }
+
+    :global(.ant-select-selection:focus) {
+        border-right-width: 1px !important;
+        outline: 0;
+    }
+}
+
+.selectPrivateTransactionTable {
+    overflow: auto;
+    background-color: rgb(26, 27, 44);
+
+    :global(.ant-table) {
+        border: none;
+    }
+
+    :global(.ant-table-thead>tr) {
+        height: 55px;
+    }
+
+    :global(.ant-table-tbody>tr) {
+        height: 40px;
+    }
+
+    :global(.ant-table-content .ant-table-header) {
+        background-color: rgb(26, 27, 44) !important;
+        border: none;
+        margin-bottom: -1px !important;
+    }
+
+    :global(::-webkit-scrollbar-track) {
+        border: none;
+        box-shadow: none;
+    }
+
+    .privateAddrColumn {
+        max-width: 200px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        word-wrap: normal;
+    }
+}

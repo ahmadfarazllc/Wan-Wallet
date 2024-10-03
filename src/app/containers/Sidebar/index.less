@@ -1,0 +1,103 @@
+@sidebar-right-bg: linear-gradient(90deg, #4e5cf4 0%, #272d68 100%) !important;
+@sidebar-right-hover-bg: #2E3657;
+@sidebar-width: 230px;
+@nav-left-bg: #151625 !important;
+
+.sidebar {
+  width: @sidebar-width;
+  height: 100vh;
+  // overflow-y: scroll;
+  overflow: auto;
+
+  .logo {
+    height: 100px;
+    padding: 28px 0 0 30px;
+    position: relative;
+    vertical-align: -webkit-baseline-middle;
+
+    img {
+      height: 48px;
+    }
+  }
+
+  .menuTreeNode {
+    color: #A1A2A8;
+    padding: 0px 15px;
+    background-color: #151625;
+  }
+
+  :global(.ant-menu-inline > .ant-menu-submenu > .ant-menu-submenu-title) {
+    height: 60px !important;
+    line-height: 60px !important;
+  }
+
+  :global(.ant-menu-dark.ant-menu-inline .ant-menu-item) {
+    font-size: 16px;
+  }
+
+  :global(.ant-menu-dark.ant-menu-inline .ant-menu-submenu-title) {
+    font-size: 16px;
+  }
+
+  :global(.ant-menu.ant-menu-dark .ant-menu-item-selected) {
+    background: @sidebar-right-bg;
+  }
+
+  :global(.ant-menu-submenu-popup.ant-menu-dark .ant-menu-item-selected) {
+    background: @sidebar-right-bg;
+  }
+
+  :global(.ant-menu-item:hover) {
+    background: @sidebar-right-hover-bg;
+  }
+
+  :global(.ant-menu-item) {
+    height: 60px !important;
+    line-height: 60px !important;
+    border-radius: 6px !important;
+  }
+
+  :global(.ant-menu-inline-collapsed) {
+    width: 120px;
+
+    >li {
+      text-align: center;
+    }
+  }
+
+  :global(.ant-menu-dark .ant-menu-inline.ant-menu-sub) {
+    box-shadow: none;
+    background-color: @nav-left-bg;
+  }
+}
+
+.collapseItem {
+  width: 20px;
+  height: 100vh;
+  position: absolute;
+  right: -20px;
+  top: 0px;
+  z-index: 100;
+
+  .collapseButton {
+    display: inline-block;
+    width: 18px;
+    height: 60px;
+    font-weight: bold;
+    position: relative;
+    left: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+}
+
+.com-circle {
+  width: 5px;
+  height: 5px;
+  background: rgba(255, 255, 255, 0.65);
+  border-radius: 50%;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
+}
